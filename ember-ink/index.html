@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ember &amp; Ink Tattoo Studio | Custom tattoos, bookings online</title>
+<meta name="description" content="Custom tribal, Japanese, fine line, blackwork and realism tattoos. Book online and pay your deposit in USD.">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alegreya:wght@400;500&family=Alegreya+Sans:wght@500;800&family=UnifrakturCook:wght@700&display=swap">
+<link rel="stylesheet" href="styles.css"></head><body>
+<header><div class="w bar"><a class="logo" href="#home">Ember &amp; Ink<small>Tattoo Studio</small></a>
+<nav id="nav"><a href="#home">Home</a><a href="#about">About</a><a href="#services">Services</a><a href="#gallery">Gallery</a><a href="#artists">Artists</a><a href="#faq">FAQ</a></nav>
+<a class="tel" href="tel:+10000000000">+1 (000) 000-0000</a><a class="btn sm" href="#book">Book now</a><button id="mb" aria-label="Menu">&#9776;</button></div></header>
+<main>
+<section class="hero" id="home"><div class="w"><h1>We create <span class="pk">custom</span> tattoos that make your story stunning</h1>
+<p>Tribal, Japanese, fine line, blackwork and realism by award-winning artists. Single-use needles, hospital-grade hygiene, and a design you approve before any ink goes in.</p>
+<p><a class="btn" href="#book">Book now</a> <a class="lnk" href="#gallery">Our works &rsaquo;</a></p></div></section>
+<div class="w feat">
+<div><svg viewBox="0 0 24 24"><circle cx="12" cy="9" r="6"/><path d="M8 14l-2 8 6-3 6 3-2-8"/></svg><h3>Best tattoo</h3><p>Original artwork drawn for your body, never copied from a flash sheet.</p></div>
+<div><svg viewBox="0 0 24 24"><path d="M7 11v10H3V11zM7 11l5-9c2 0 3 1 3 3v4h6l-2 11H7"/></svg><h3>Good quality</h3><p>Crisp lines, solid colour and healed results we are proud to photograph.</p></div>
+<div><svg viewBox="0 0 24 24"><path d="M12 2l8 3v6c0 5-3.5 9-8 11-4.5-2-8-6-8-11V5z"/><path d="M8 12l3 3 5-6"/></svg><h3>Hygiene tools</h3><p>Single-use needles and ink caps, autoclaved equipment, disinfected stations.</p></div>
+<div class="on"><svg viewBox="0 0 24 24"><path d="M3 21l3-1L19 7l-2-2L4 18z"/><path d="M15 5l2-2 4 4-2 2"/></svg><h3>Tattoo artists</h3><p>Six specialists. Meet the team below and choose who inks you.</p></div></div>
+
+<section id="about"><div class="w two"><div class="ph tall" data-l="images/studio.jpg"><img src="images/studio.jpg" alt="Inside the studio" loading="lazy" onerror="this.remove()"></div>
+<div><h2>We are the best tattoo studio <span class="pk">in town</span></h2>
+<p>Ember &amp; Ink started as a one-chair shop and grew into a full studio with a reputation for clean linework and honest advice. We talk through size, placement and healing before we ever pick up a machine, and we will tell you if an idea will not age well.</p>
+<div class="stats"><div><b>12+</b>Years of experience</div><div><b>5,000+</b>Tattoos completed</div><div><b>6</b>Professional artists</div><div><b>100%</b>Sterile, single-use</div></div></div></div></section>
+
+<section id="services" class="alt"><div class="w"><h2>Our <span class="pk">services</span></h2><p class="mut">Starting prices in US dollars. Final price depends on size, detail and placement. Studio rate $150 per hour.</p><div class="cards" id="sg"></div></div></section>
+
+<section id="gallery"><div class="w"><h2>Recent <span class="pk">work</span></h2><div class="chips" id="gc"></div><div class="gal" id="gg"></div></div></section>
+
+<section id="artists" class="alt"><div class="w"><h2>Meet the <span class="pk">artists</span></h2><div class="cards" id="ag"></div></div></section>
+
+<section id="book"><div class="w"><h2>Book your <span class="pk">session</span></h2><p class="mut">Pay a deposit in USD to lock in your time. It is deducted from your final price.</p><div id="paid" class="ok" hidden></div>
+<div class="bk"><form id="bf" novalidate>
+<label>Service<select id="fs"></select></label><label>Size<select id="fz"></select></label>
+<label>Placement<select id="fp"></select></label><label>Design or style reference<input id="fd" placeholder="e.g. Koi sleeve, gallery photo tribal-2"></label>
+<label>Date<input type="date" id="fdt"></label>
+<div class="f"><span class="lb">Time (closed Mondays)</span><div class="slots" id="sl"><small class="mut">Pick a date to see open times.</small></div></div>
+<label>Full name<input id="fn" autocomplete="name"></label><label>Email<input id="fe" type="email" autocomplete="email"></label>
+<label class="f">Phone<input id="fph" type="tel" autocomplete="tel"></label>
+<label class="f">Tell us about your idea<textarea id="fnt" rows="3"></textarea></label>
+<label class="chk"><input type="checkbox" id="fdz"> Add a custom design drawing (+$40)</label>
+<label class="chk"><input type="checkbox" id="fa"> I am 18 or older and will bring photo ID</label>
+<p class="err f" id="er" role="alert"></p><button class="btn f" id="pay" type="submit"></button></form>
+<aside class="sum"><h3>Your estimate</h3><dl id="sd"></dl><div class="tot"><span>Total (USD)</span><span id="tt"></span></div><p class="mut" id="dp"></p><p class="mut sm">Secure card payment by Stripe. Apple Pay and Google Pay appear automatically where available.</p></aside></div></div></section>
+
+<section id="faq" class="alt"><div class="w narrow"><h2>Questions</h2>
+<details><summary>How much is the deposit?</summary><p>25% of your estimate, minimum $30, charged in US dollars and deducted from your final price. Consultations are free.</p></details>
+<details><summary>Can I reschedule?</summary><p>Yes, with 48 hours' notice email us and we will move your deposit. Later changes forfeit it.</p></details>
+<details><summary>Can you draw my own idea?</summary><p>Yes. Describe it in the booking form and add the custom drawing option. You approve the sketch first.</p></details>
+<details><summary>How should I care for a new tattoo?</summary><p>Keep it clean and lightly moisturised, avoid soaking, sun and scratching for two weeks, and follow the care sheet we give you.</p></details></div></section>
+</main>
+<footer><div class="w fg"><div><div class="logo">Ember &amp; Ink</div><p class="mut">Custom tattoos. All prices in US dollars.</p></div><div><h3>Hours</h3><p class="mut">Tue to Sun, 10:00 to 18:00<br>Closed Monday</p></div><div><h3>Visit</h3><p class="mut">123 Studio Street, Your City<br>hello@yourstudio.com<br>+1 (000) 000-0000</p></div></div></footer>
+<dialog id="lb"><button id="lx" aria-label="Close">&times;</button><img id="li" alt=""></dialog>
+<dialog id="dl"><h3>Booking received</h3><div id="dc"></div><p><button class="btn" onclick="dl.close()">Done</button></p></dialog>
+<script src="app.js"></script></body></html>

@@ -1,0 +1,47 @@
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:76px}
+:root{--bg:#09090b;--alt:#0f0f13;--card:#17171c;--line:#2a2a32;--fg:#fff;--mut:#a9a9b3;--pink:#ff1a66}
+body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.65 Alegreya,Georgia,serif}
+h1,h2,h3,nav,button,label,.btn,.lb,.tel,.chip,.stats{font-family:"Alegreya Sans",system-ui,sans-serif}
+h1,h2,h3{margin:0 0 12px;line-height:1.1;text-transform:uppercase;font-weight:800}
+h1{font-size:clamp(2.3rem,6vw,4.3rem);max-width:15ch}h2{font-size:clamp(1.8rem,3.6vw,2.6rem)}h3{font-size:1.15rem}
+.pk{color:var(--pink)}.mut{color:var(--mut)}.sm{font-size:.85rem}a{color:inherit}
+.w{max-width:1160px;margin:auto;padding:0 20px}.narrow{max-width:760px}
+section{padding:90px 0}.alt{background:var(--alt)}
+:focus-visible{outline:3px solid var(--pink);outline-offset:2px}
+header{position:fixed;inset:0 0 auto;z-index:50;background:rgba(9,9,11,.88);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;gap:22px;height:68px}
+.logo{font:700 1.9rem UnifrakturCook,serif;color:var(--pink);text-decoration:none;line-height:1;margin-right:auto}.logo small{display:block;font:500 .6rem "Alegreya Sans";color:var(--fg);letter-spacing:.05em}
+nav a{margin-right:18px;text-decoration:none;font-weight:500;font-size:.85rem;text-transform:uppercase}nav a:hover{color:var(--pink)}
+.tel{font-size:.9rem;font-weight:500;text-decoration:none}#mb{display:none;background:none;border:0;color:var(--fg);font-size:1.6rem}
+.btn{display:inline-block;background:var(--pink);color:#fff;border:0;padding:14px 32px;font-weight:800;text-transform:uppercase;font-size:.95rem;cursor:pointer;text-decoration:none}
+.btn.sm{padding:9px 18px;font-size:.8rem}.btn:hover{filter:brightness(1.12)}.lnk{margin-left:22px;font:500 .95rem "Alegreya Sans";text-transform:uppercase;text-decoration:none}
+@media(max-width:960px){.tel{display:none}#mb{display:block}nav{display:none;position:absolute;top:68px;left:0;right:0;background:var(--bg);padding:14px 20px;border-bottom:1px solid var(--line)}nav.open{display:block}nav a{display:block;padding:8px 0}}
+.hero{min-height:100vh;display:flex;align-items:center;padding-top:68px;background:linear-gradient(90deg,var(--bg) 22%,rgba(9,9,11,.6) 58%,rgba(9,9,11,.15)),radial-gradient(circle at 78% 38%,rgba(255,26,102,.38),transparent 55%),url(images/hero.jpg) center/cover,var(--bg)}
+.hero p{max-width:52ch;color:#d4d4da;font-size:1.1rem}
+.feat{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:-80px;position:relative;z-index:2}
+.feat>div{background:var(--card);border:1px solid var(--line);padding:26px}.feat .on{background:var(--pink);border-color:var(--pink)}.feat p{margin:0;color:var(--mut);font-size:.95rem}.feat .on p{color:#fff}
+.feat svg{width:34px;height:34px;fill:none;stroke:var(--pink);stroke-width:1.6;margin-bottom:10px}.feat .on svg{stroke:#fff}
+@media(max-width:900px){.feat{grid-template-columns:1fr 1fr}}@media(max-width:520px){.feat{grid-template-columns:1fr}}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}@media(max-width:800px){.two{grid-template-columns:1fr}}
+.ph{position:relative;overflow:hidden;background:repeating-linear-gradient(45deg,#17171c,#17171c 10px,#1c1c22 10px,#1c1c22 20px)}
+.ph::after{content:attr(data-l);position:absolute;inset:0;display:grid;place-items:center;text-align:center;padding:10px;color:var(--mut);font:14px "Alegreya Sans"}
+.ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1}.tall{aspect-ratio:4/5}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:22px}.stats div{background:var(--card);border-left:3px solid var(--pink);padding:12px 16px;font-size:.9rem;color:var(--mut)}.stats b{display:block;font-size:2rem;color:var(--fg);line-height:1.1}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:16px;margin-top:26px}
+.sv{background:var(--card);border:1px solid var(--line);padding:22px;display:flex;flex-direction:column;gap:6px}.sv p{margin:0;color:var(--mut);flex:1;font-size:.97rem}.sv .pr{color:var(--pink);font:800 1.1rem "Alegreya Sans"}
+.sv button,.ar button{align-self:flex-start;background:none;border:1px solid var(--pink);color:var(--fg);padding:6px 14px;cursor:pointer;font-weight:500;text-transform:uppercase;font-size:.8rem}.sv button:hover{background:var(--pink)}
+.ar{background:var(--card);border:1px solid var(--line)}.ar .ph{aspect-ratio:1}.ar div.i{padding:16px}.ar p{margin:0;color:var(--mut)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0}.chip{border:1px solid var(--line);background:var(--card);color:var(--fg);padding:7px 18px;cursor:pointer;font-weight:500;text-transform:uppercase;font-size:.8rem}.chip[aria-pressed=true]{background:var(--pink);border-color:var(--pink)}
+.gal{columns:4 220px;column-gap:12px}.gal .ph{break-inside:avoid;margin-bottom:12px;cursor:zoom-in;border:0;padding:0;display:block;width:100%}
+.bk{display:grid;grid-template-columns:1.4fr 1fr;gap:26px;margin-top:22px;align-items:start}@media(max-width:880px){.bk{grid-template-columns:1fr}}
+form{display:grid;grid-template-columns:1fr 1fr;gap:14px;background:var(--card);border:1px solid var(--line);padding:22px}.f{grid-column:1/-1}@media(max-width:560px){form{grid-template-columns:1fr}}
+label,.lb{display:flex;flex-direction:column;gap:5px;font-weight:500;font-size:.9rem;text-transform:uppercase}label.chk{flex-direction:row;align-items:center;text-transform:none;font-size:.95rem}
+input,select,textarea{font:16px Alegreya,serif;padding:10px;border:1px solid var(--line);background:var(--bg);color:var(--fg);width:100%}input[type=checkbox]{width:auto}
+.slots{display:flex;flex-wrap:wrap;gap:8px;text-transform:none}.slots button{border:1px solid var(--line);background:var(--bg);color:var(--fg);padding:8px 14px;cursor:pointer}.slots button[aria-pressed=true]{background:var(--pink);border-color:var(--pink)}.slots button:disabled{opacity:.3;text-decoration:line-through;cursor:not-allowed}
+.sum{background:var(--card);border:1px solid var(--line);border-top:3px solid var(--pink);padding:22px;position:sticky;top:84px}.sum dl{display:grid;grid-template-columns:1fr auto;gap:5px 12px;margin:12px 0}.sum dt{color:var(--mut)}.sum dd{margin:0;text-align:right}
+.tot{display:flex;justify-content:space-between;border-top:1px solid var(--line);padding-top:10px;font:800 1.4rem "Alegreya Sans"}
+.err{color:#ff8a80;margin:0;min-height:1.5em}.ok{background:#12301f;border:1px solid #2e7d4f;padding:14px 18px;margin:14px 0}
+details{border-bottom:1px solid var(--line);padding:14px 0}summary{cursor:pointer;font:500 1.05rem "Alegreya Sans";text-transform:uppercase}details p{color:var(--mut);margin:8px 0 0}
+dialog{background:var(--card);color:var(--fg);border:1px solid var(--pink);max-width:min(92vw,560px);padding:24px}dialog::backdrop{background:rgba(0,0,0,.8)}
+#lb{padding:0;max-width:92vw;position:relative}#li{display:block;max-width:92vw;max-height:88vh}#lx{position:absolute;top:6px;right:10px;background:none;border:0;color:#fff;font-size:2rem;cursor:pointer}
+footer{border-top:1px solid var(--line);padding:46px 0}.fg{display:grid;grid-template-columns:2fr 1fr 1.4fr;gap:30px}@media(max-width:700px){.fg{grid-template-columns:1fr}}
